@@ -70,3 +70,32 @@ def add_computers():
                 },
                 "condition": "Good" if i % 5 != 0 else "Fair"
             })
+    
+def add_schedules():
+    computer_labs["Lab 1"]["schedule"].append({
+        "day": "Monday",
+        "lesson": "Programming",
+        "time": "9:00 AM - 10:00 AM",
+        "instructor": "MR. Walusimbi"
+    })
+    
+    computer_labs["Lab 2"]["schedule"].append({
+        "day": "Tuesday",
+        "lesson": "Networking",
+        "time": "10:30 AM - 12:30 PM",
+        "instructor": "Mr. Asad"
+    })
+    
+    computer_labs["Lab 3"]["schedule"].append({
+        "day": "Wednesday",
+        "lesson": "Statistics",
+        "time": "8:00 PM - 10:00 PM",
+        "instructor": "Mrs. Aisha"
+    })
+    
+    computer_labs["Lab 4"]["schedule"].append({
+        "day": "Thursday",
+        "lesson": "Maintenance",
+        "time": "2:00 PM - 4:00 PM",
+        "instructor": "Mr. Asad"
+    })
