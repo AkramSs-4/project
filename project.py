@@ -109,3 +109,21 @@ def show_all_labs():
         print(f'-Admin: {lab['admin']}')
         print(f'-Computers registered: {len(lab['computers'])}')
         print(f'-Scheduled classes: {len(lab['schedule'])}')
+
+def show_lab_schedule(lab_name):
+    if lab_name not in computer_labs:
+        print("Lab Not Found⛔. Please choose Lab 1, 2, 3, or 4.")
+        return
+    
+    lab = computer_labs[lab_name]
+    print(f"\n{lab_name} Schedule:")
+    
+    if not lab["schedule"]:
+        print("No scheduled classes for this lab.")
+    else:
+        for class_information in lab["schedule"]:
+            print(f"\n-Day: {class_information['day']}")
+            print(f"-Activity: {class_information['activity']}")
+            print(f"-Time: {class_information['time']}")
+            print(f"-Instructor: {class_information['instructor']}")
+            
