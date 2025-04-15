@@ -126,4 +126,31 @@ def show_lab_schedule(lab_name):
             print(f"-Activity: {class_information['activity']}")
             print(f"-Time: {class_information['time']}")
             print(f"-Instructor: {class_information['instructor']}")
-            
+
+def main_menu():
+    add_computers()  
+    add_schedules() 
+    
+    print("Welcome to Computer Lab Management System")
+    
+    while True:
+        print("\nMain Menu:")
+        print("1. View all labs")
+        print("2. View computers in a lab")
+        print("3. View schedule for a lab")
+        print("4. Exit")
+        
+        choice = input("Please choose an option (1-4): ")
+        
+        if choice == "1":
+            show_all_labs()
+        elif choice == "2":
+            lab = input("Which lab? (1, 2, 3, or 4): ")
+        elif choice == "3":
+            lab = input("Which lab? (1, 2, 3, or 4): ")
+            show_lab_schedule(f"Lab {lab}")
+        elif choice == "4":
+            print("Exiting Program!!!!!!!!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
