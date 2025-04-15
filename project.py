@@ -110,7 +110,7 @@ def show_all_labs():
         print(f'-Computers registered: {len(lab['computers'])}')
         print(f'-Scheduled classes: {len(lab['schedule'])}')
 
-def show_lab_schedule(lab_name):
+def show_lab_computer(lab_name):
     if lab_name not in computer_labs:
         print("Lab Not Found⛔. Please choose Lab 1, 2, 3, or 4.")
         return
@@ -130,8 +130,8 @@ def show_lab_schedule(lab_name):
 def main_menu():
     add_computers()  
     add_schedules() 
-    
-    print("Welcome to Computer Lab Management System")
+
+    print("**Computer Lab Management System**")
     
     while True:
         print("\nMain Menu:")
@@ -148,9 +148,11 @@ def main_menu():
             lab = input("Which lab? (1, 2, 3, or 4): ")
         elif choice == "3":
             lab = input("Which lab? (1, 2, 3, or 4): ")
-            show_lab_schedule(f"Lab {lab}")
+            show_lab_computer(f"Lab {lab}")
         elif choice == "4":
             print("Exiting Program!!!!!!!!")
             break
         else:
             print("Invalid choice. Please try again.")
+if __name__ == "__main__":
+    main_menu()
