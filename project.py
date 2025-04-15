@@ -99,3 +99,13 @@ def add_schedules():
         "time": "2:00 PM - 4:00 PM",
         "instructor": "Mr. Asad"
     })
+
+def show_all_labs():
+    print("\nAll Computer Labs:")
+    for lab_name in computer_labs:
+        lab = computer_labs[lab_name]
+        print(f"\n{lab_name}:")
+        print(f'-Capacity: {lab['capacity']} computers')
+        print(f'-Admin: {lab['admin']}')
+        print(f'-Computers registered: {len(lab['computers'])}')
+        print(f'-Scheduled classes: {len(lab['schedule'])}')
